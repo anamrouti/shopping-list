@@ -2,9 +2,12 @@ $(function(){
   $('#js-shopping-list-form').submit(function(event){
     event.preventDefault();
     const myItem = $('.js-shopping-list-entry').val();
+    
     $('#shopping-list-entry').val('');
+    
     $('.shopping-list').append(
-    `<li><span class="shopping-item">${myItem}</span>
+    `<li>
+        <span class="shopping-item">${myItem}</span>
         <div class="shopping-item-controls">
           <button class="shopping-item-toggle">
             <span class="button-label">Check</span>
