@@ -1,5 +1,5 @@
-$(function handleShoppingList(){
-  $('#js-shopping-list-form').on('submit', function(event){
+$(function(){
+  $('#js-shopping-list-form').submit(function(event){
     event.preventDefault();
     const myItem = $('.js-shopping-list-entry').val();
     $('#shopping-list-entry').val('');
@@ -13,7 +13,7 @@ $(function handleShoppingList(){
             <span class="button-label">Delete</span>
           </button>
         </div>
-      </li>`)
+      </li>`);
    });
    $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
     $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
@@ -21,5 +21,5 @@ $(function handleShoppingList(){
   $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
     $(this).closest('li').remove();
   });
-     $(handleShoppingList());
-})
+   
+});
